@@ -1,0 +1,57 @@
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<body>
+	<div class="index_container">
+	<h1>Tausand Moglichkeiten in Japan</h1>			
+		<div class="ertable">
+			<table>
+				<thead>
+					<tr>
+						<th>Bilder</th>
+						<th style="background-color: grey">Name</th>
+						<th>Title</th>
+						<th >Age</th>
+						<th >Jahres Zeit</th>
+						<th>Region</th>
+						<th>Ort</th>
+						<th>Price</th>
+						<th>Favoriten</th>
+						<th>Die Zahlen</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @articles.each do|article| %>				
+						<tr>
+						<% if article.image? %>
+					    　	<td><%=  image_tag article.image.url%></td>
+					    　<% else %>
+					     		<td>Kein Bild</td>
+					    　<% end %>
+
+							<td style="background-color: grey;">
+								<%=  link_to article.name, article_path(article.id) %>
+							</td>
+							<td><%=article.title%></td>
+							<td><%=article.age%></td>
+							<td><%= article.season %></td>
+							<td><%= article.country %></td>
+							<td><%=article.place%></td>
+							<td><%=article.price%></td>
+							<td>
+							<div id="favorites">
+								<%= render "articles/favorites" , article: article %>
+							</div>
+							</td>
+							<td><%= article.favorites.count%></td>
+		 		
+						 <% end %>
+					      
+							</tr>									
+				</tbody>
+			</table>
+			<%= paginate @articles %>
+			
+		</div>
+	</div>		
+</body>

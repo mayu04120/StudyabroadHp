@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Die moglichkeiten in Japan fur Austausch</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <meta charset="utf-8">
+		<meta name="description" content="AustauschUnterstuzung">
+	<meta name="keywords" content="Austausch,Unterstuzung,langweil,Japan,">
+		<link rel="shortcut icon" href="assets/a.ico">
+		<meta property="og:title" content="留学エージェントのランキング比較サイト｜DejaUnterstuzung">
+
+<header>
+		  		<!-- headerのアイコンと文字 -->
+		  		
+		  		<% if flash[:alert] %><div class="alert">
+					    <%= flash[:alert] %></div>
+				<% end %>
+				
+
+		 	<div class="container">
+				<a href="index.html">
+					<br>
+					<%=image_tag "a.jpg",:width=>'50',:height=>'30'%><!-- <img src="image/a.jpg" alt="peachアイコン">  -->
+					<div class="explanation"> Austausch<br>UnterstuzungOrganization
+					</div>
+				</a>
+			</div>
+
+				<!-- ハンバーガーアイコン -->
+			<div class="i">
+			  	<div class="icon">
+			    		<div class="menu-trigger">
+			        			<span></span>
+			        			<span></span>
+			        			<span></span>
+			   		 </div>
+				</div>
+
+			</div>
+			<!-- ハンバーガーアイコンおしまい -->
+			
+			<!-- ハンバーガーアイコンの中身 -->
+			<div class="hamnav">
+		  		  <!-- <ul> -->
+		  		  <div class="hamnav_font">
+	        				<p><%= link_to "Top" ,top_path%></p>
+	        				<p><%= link_to "About",about_path%></p>
+	        				<p><%= link_to "List",articles_path%></p>
+	        				<p><% if user_signed_in? %>
+						      Logged in as <%= current_user.name %></p>
+						      <p>
+						       <%= link_to 'プロフィール変更', edit_user_registration_path %></p>
+						      <p><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+						   	<%= link_to 'Like List', userpage_show_path(current_user) %>
+						    	<% else %>
+						      <%= link_to "Sign in", new_user_registration_path %> |
+						      <%= link_to "Log in", new_user_session_path %>
+					    	<% end %>
+				</div>
+	        				
+	   			<!-- </ul> -->
+			</div>
+			<!--ハンバーガーアイコンの中身-->
+
+		</header>
+
+    <%= yield %>
+
+   	<footer>
+   		<div class="footer_space" style="height: 50px;"></div>
+
+		<p class="footer_font">
+			|<%= link_to "Top" ,top_path, :style=>"color:white; "%>
+			|<%= link_to "About" ,about_path, :style=>"color:white;"%>
+			|<%= link_to "List",articles_path,:style=>"color:white;"%>
+			|<%= link_to "Pamphlet" ,pamphlet_path, :style=>"color:white;"%>
+			|<%= link_to "Media" ,media_path, :style=>"color:white;"%>|
+		</p>
+
+		<p>copyright©2017 mayu masuda. All right reserved</p>				
+	</footer>
+  </body>
+</html>

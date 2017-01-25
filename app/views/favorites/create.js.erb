@@ -1,0 +1,4 @@
+$("#like-button").val("");
+$("#favorites").html(
+		'<%= j(render 'articles/favorites', article: @article )%>'
+	);

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<html>
+	<head>		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+	<!--header-->
+		<div class="mv">
+
+			<!-- Videoここから -->
+					<video class="video" autoplay loop>
+			<source src="assets/videos/mv.mp4" controls>
+		</div>
+			<div class="title" id="title"><a>Moglichkeiten in Japan fur Austausch</a></div>
+			<div class="search">	
+				<!--留学体験談投稿ボタン-->
+			  	<div class="button" id="modal-open1">Posten</div>
+
+					<div  id="modal-content1" >
+
+	
+					<%= form_for(@article, url: articles_path) do | f | %>	
+							<p class="modal-content_title">Write your challenge in Japan
+							<br>(content with* is necessary)
+							<br>To make information sufficient,please fill in all the blank if possible</p>
+							<div class="clearfix formquestion">
+								<div class="formquestion_left">
+									<p>Name*</p>
+									<p>Title*</p>
+									<p>Age at that time</p>
+									<p>Season at that time</p>
+									<p>Place*</p>
+									<p>Photo</p>
+									<p>Price</p>
+								</div>
+								<div class="formquestion_right">
+									<p><%=f.text_field :name,:size=>'30',:maxlength=>'30' %></p>
+									<p><%= f.text_field :title, :size=>"30", :maxlength=>"30"%></p>
+									<p><%= f.number_field :age,:maxlength=>"2", :min=>"3"%></p>
+									<p><%=f.number_field :season, :min=>"1", :max=>"12"%></p>
+									<p><%=f.text_field :place%></p>
+									<p><%= f.file_field :image %> </p>
+								</div>
+							</div>
+									<p>
+										<label><%= f.radio_button :price, '100' %> ～100yen</label>
+										<label><%= f.radio_button :price,'1000' %> ～10,000yen</label>
+										<label><%= f.radio_button :price, '5000' %> ～50,000yen</label>
+										<label><%= f.radio_button :price,'5000' %> 50,000yen～</label>	
+									</p>
+										
+							
+								
+										<!-- 地域を選択 -->
+									
+									<p>Chose the area</p>					  					   
+										<div id="message">Wahl die Region</div>
+									<!-- 地域を選ぶ左のボタン -->
+									<div class="area_select_button">
+										<div onclick="reset1()" value="最初に戻る" class="reset_button">Zuruck zum Erst
+										</div>
+										<div onclick="hokkaido1()" class="hokkaido_button">Hokkaido</div>
+										<div onclick="tohoku1()" class="tohoku_button">Tohoku </div>
+										<div onclick="kanto1()" class="kanto_button">Kanto</div>
+										<div onclick="chubu1()" class="chubu_button">Chubu</div>
+										<div onclick="kansai1()" class="kansai_button">Kansai</div>
+										<div onclick="chugoku1()" class="chugoku_button">Chugoku</div>
+										<div onclick="shikoku1()" class="shikoku_button">Shikoku</div>
+										<div onclick="kyusyu1()" class="kyusysu_button">Kyusyu</div>								
+									</div>	
+													
+									<%=image_tag "map.png",:width=>'450px',:height=>'340px', :name=>'imgLink', :style=>'margin:auto;' %>									
+											<!-- 国を選ぶ右のボタン -->
+										<div id="area_selectbutton_right">
+											<div class="hokkaido_selectbutton">
+												<p><%= f.radio_button :country,'hokkaido'%>Hokkaido</p>
+											</div>
+											<div class="tohoku_selectbutton">
+												<p><%= f.radio_button :country,'Aomori'%>Aomori</p>
+												<p><%= f.radio_button :country,'Iwate'%>Iwate</p>
+												<p><%= f.radio_button :country,'Akita'%>Akita</p>
+												<p><%= f.radio_button :country,'Miyagi'%>Miyagi</p>
+												<p><%= f.radio_button :country,'Yamagata'%>Yamagata</p>
+												<p><%= f.radio_button :country,'Fukushima'%>Fukushima</p>
+											</div>
+											<div class="kanto_selectbutton">
+												<p><%= f.radio_button :country,'Tokyo'%>Tokyo</p>
+												<p><%= f.radio_button :country,'Saitama'%>Saitama</p>
+												<p><%= f.radio_button :country,'Kangawa'%>Kangawa</p>
+												<p><%= f.radio_button :country,'Tochigi'%>Tochigi</p>
+												<p><%= f.radio_button :country,'Gunnma'%>Gunnma</p>
+												<p><%= f.radio_button :country,'Ibaragi'%>Ibaragi</p>
+												<p><%= f.radio_button :country,'Chiba'%>Chiba</p>
+											</div>
+											<div class="chubu_selectbutton">
+												<p><%= f.radio_button :country,'Niigata'%>Niigata</p>
+												<p><%= f.radio_button :country,'Toyama'%> Toyama</p>
+												<p><%= f.radio_button :country,'Ishikawa'%>Ishikawa</p>
+												<p><%= f.radio_button :country,'Fukui'%>Fukui</p>
+												<p><%= f.radio_button :country,'Yamanashi'%>Yamanashi</p>		
+												<p><%= f.radio_button :country,'Nagano'%>Nagano</p>
+												<p><%= f.radio_button :country,'Gifu'%>Gifu</p>
+												<p><%= f.radio_button :country,'Shizuoka'%>Shizuoka</p>
+												<p><%= f.radio_button :country,'Aichi'%>Aichi</p>
+											</div>
+											<div class="kansai_selectbutton">
+												<p><%= f.radio_button :country,'Osaka'%>Osaka</p>
+												<p><%= f.radio_button :country,'Kyoto'%>Kyoto</p>
+												<p><%= f.radio_button :country,'Mie'%>Mie</p>
+												<p><%= f.radio_button :country,'Hyogo'%>Hyogo</p>
+												<p><%= f.radio_button :country,'Nara'%>Nara</p>
+												<p><%= f.radio_button :country,'Shiga'%>Shiga</p>
+												<p><%= f.radio_button :country,'Wakayama'%>Wakayama</p>	
+											</div>
+											<div class="chugoku_selectbutton">
+												<p><%= f.radio_button :country,'Tottori'%>Tottori</p>
+												<p><%= f.radio_button :country,'Shimane'%>Shimane</p>
+												<p><%= f.radio_button :country,'Okayama'%>Okayama</p>
+												<p><%= f.radio_button :country,'Hiroshima'%>Hiroshima</p>
+												<p><%= f.radio_button :country,'Yamaguchi'%>Yamaguchi</p>
+											</div>
+											<div class="shikoku_selectbutton">
+												<p><%= f.radio_button :country,'Tokushima'%>Tokushima</p>
+												<p><%= f.radio_button :country,'Kagawa'%>Kagawa</p>
+												<p><%= f.radio_button :country,'Ehime'%>Ehime</p>
+												<p><%= f.radio_button :country,'Kochi'%>Kochi</p>
+											</div>
+											<div class="kyusyu_selectbutton">
+												<p><%= f.radio_button :country,'Fukuoka'%>Fukuoka</p>
+												<p><%= f.radio_button :country,'Saga'%>Saga</p>
+												<p><%= f.radio_button :country,'Nagasaki'%>Nagasaki</p>
+												<p><%= f.radio_button :country,'Kumamoto'%>Kumamoto</p>
+												<p><%= f.radio_button :country,'Oita'%>Oita</p>
+												<p><%= f.radio_button :country,'Miyazaki'%>Miyazaki</p>
+												<p><%= f.radio_button :country,'Kagoshima'%>Kagoshima</p>
+												<p><%= f.radio_button :country,'Okinawa'%>Okinawa</p>
+											</div>
+										</div>
+
+										<p>Comments</p>
+											<%=f.text_area :contents,:class=>'formquestion_content',:placeholder=>'write down your challenge as long as you like', :rows=>"4" %>
+										<button type="submit" style="margin-top: 80px;"><strong><%= f.submit  %></strong></button>
+						</div>
+					<% end %>
+
+								<!--ランキングを検索 ボタン -->
+				<div class="button" id="modal-open2">Suchen</div>
+
+					<div  id="modal-content2" >
+
+					<%= search_form_for(@q, url: articles_path) do |f| %>				
+						
+							<p class="modal-content_title">Serach by...</p>
+							<div class="formquestion clearfix">
+								<div class="formquestion_left">
+									<p>Name</p>
+									<p>Title</p>
+									<p>Age</p>
+									<p>Season</p>
+									<p>Place</p>
+									<p>Price</p>
+								</div>
+
+								<div class="formquestion_right">
+									<p><%=f.text_field :name_cont%></p>
+									<p><%=f.text_field :title_cont%></p>
+									<p><%= f.number_field :age_eq, :size=>"5", :maxlength=>"2", :min=>"3"%></p>
+									<p><%=f.number_field :season_eq, :min=>"1", :max=>"12"%></p>
+									<p><%=f.text_field :place%></p>
+								</div>
+							</div>	
+								<p>Von<%= f.search_field :price_gt %>yen	 Bis<%= f.search_field :price_lt %>yen	</p>
+							
+										<!-- 地域を選択 -->
+												<p>Die Ort du gehen mochtest</p>
+							  					   
+												<div id="message2">Wahl die Region</div>
+												<!-- 地域を選ぶ左のボタン -->
+												<div class="area_select_button">
+													<div onclick="reset2()" value="最初に戻る" class="reset_button">Zuruck zum Erst
+													</div>
+													<div onclick="hokkaido2()" class="hokkaido_button">Hokkaido</div>
+													<div onclick="tohoku2()" class="tohoku_button">Tohoku </div>
+													<div onclick="kanto2()" class="kanto_button">Kanto</div>
+													<div onclick="chubu2()" class="chubu_button">Chubu</div>
+													<div onclick="kansai2()" class="kansai_button">Kansai</div>
+													<div onclick="chugoku2()" class="chugoku_button">Chugoku</div>
+													<div onclick="shikoku2()" class="shikoku_button">Shikoku</div>
+													<div onclick="kyusyu2()" class="kyusyu_button">Kyusyu</div>	
+												</div>	
+												<img src="assets/map.png" name="imgLink2" width="450px" height="340px" style="margin: auto;"> 
+											
+											<!-- 国を選ぶ右のボタン -->
+										<div id="area_selectbutton_right">
+										<!-- select the area-->
+											<div class="hokkaido_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true}, 'hokkaido', nil %>Hokkaido</p>
+											</div>
+											<div class="tohoku_selectbutton">
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Aomori', nil%>Aomori</p>
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Iwate', nil%>Iwate</p>
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Akita', nil%>Akita</p>
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Miyagi', nil%>Miyagi</p>
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Yamagata', nil%>Yamagata</p>
+													<p><%= f.check_box :country_cont_any,{multiple: true},'Fukushima', nil%>Fukushima</p>
+												</div>
+											<div class="kanto_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Tokyo', nil%>Tokyo</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Saitama', nil%>Saitama</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kangawa', nil%>Kangawa</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Tochigi', nil%>Tochigi</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Gunnma', nil%>Gunnma</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Ibaragi', nil%>Ibaragi</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Chiba', nil%>Chiba</p>
+											</div>
+											<div class="chubu_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Niigata', nil%>Niigata</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Toyama', nil%> Toyama</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Ishikawa', nil%>Ishikawa</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Fukui', nil%>Fukui</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Yamanashi', nil%>Yamanashi</p>		
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Nagano', nil%>Nagano</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Gifu', nil%>Gifu</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Shizuoka', nil%>Shizuoka</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Aichi', nil%>Aichi</p>
+											</div>
+											<div class="kansai_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Osaka', nil%>Osaka</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kyoto', nil%>Kyoto</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Mie', nil%>Mie</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Hyogo', nil%>Hyogo</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Nara', nil%>Nara</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Shiga', nil%>Shiga</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Wakayama', nil%>Wakayama</p>											
+											</div>
+											<div class="chugoku_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Tottori', nil%>Tottori</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Shimane', nil%>Shimane</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Okayama', nil%>Okayama</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Hiroshima', nil%>Hiroshima</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Yamaguchi', nil%>Yamaguchi</p>
+											</div>
+											<div class="shikoku_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Tokushima', nil%>Tokushima</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kagawa', nil%>Kagawa</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Ehime', nil%>Ehime</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kochi', nil%>Kochi</p>
+											</div>
+											<div class="kyusyu_selectbutton">
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Fukuoka', nil%>Fukuoka</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Saga', nil%>Saga</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Nagasaki', nil%>Nagasaki</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kumamoto', nil%>Kumamoto</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Oita', nil%>Oita</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Miyazaki', nil%>Miyazaki</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Kagoshima', nil%>Kagoshima</p>
+												<p><%= f.check_box :country_cont_any,{multiple: true},'Okinawa', nil%>Okinawa</p>
+											</div>
+										</div>
+										<p>Comment</p>
+											<%=f.text_area :contents,:class=>'formquestion_content',:placeholder=>'write down your challenge as long as you like', :rows=>"4" %>
+											<br>
+										<button type="submit" style="margin-top: 80px;"><%= f.submit %></button>
+						</div>
+
+<% end %>		 	
+
+			</div>	
+				<!--social iconの置き場  -->
+				<div class="social">
+				<!--Twitter-->
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="s留学支援団体PEACHで、留学エージェントを調べてみました。">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<!--facebook-->
+						<br><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fwanna.go.studyabroad%2F&width=136&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId" width="136" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>	
+			</div>	
+		</video></div>
+
+	<!--Pamphletここから-->
+		<div class="container3">
+
+			<div class="pamphlet">
+				<h3>Pamphlet</h3>
+
+
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+					<!-- Slides -->
+						<div class="swiper-slide">
+							
+								<%= link_to image_tag("p1.jpg"),pamphlet_path%>
+							
+						</div>
+						<div class="swiper-slide">
+							
+								<%= link_to image_tag("p2.jpg"),pamphlet_path%>
+							
+						</div>
+						<div class="swiper-slide">
+							
+								<%= link_to image_tag("p3.jpg"),pamphlet_path%>
+							
+						</div>
+						<div class="swiper-slide">
+						
+								<%= link_to image_tag("p1.jpg"),pamphlet_path%>
+							
+						</div>
+						<div class="swiper-slide">
+							
+								<%= link_to image_tag("p2.jpg"),pamphlet_path%>
+							
+						</div>
+						<div class="swiper-slide">
+								<%= link_to image_tag("p3.jpg"),pamphlet_path%>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- ページネーション -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+
+
+	<!--ランキングここから-->	
+	<div class="container3"> 
+			<h3>Die neueste Artikle</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Bilder</th>
+						<th style="background-color: grey">Name</th>
+						<th>Title</th>
+						<th >Age</th>
+						<th >Jahres Zeit</th>
+						<th>Region</th>
+						<th>Ort</th>
+						<th>Price</th>
+						<th>Favoriten</th>
+						<th>Die Zahlen</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<%@articles.last(3).each do|article|%>				
+						<tr>
+						<% if article.image? %>
+					    　	<td><%=  image_tag article.image.url%></td>
+					    　<% else %>
+					     		<td>Kein Bild</td>
+					    　<% end %>
+
+							<td style="background-color: grey;">
+								<%=  link_to article.name, article_path(article.id) %>
+							</td>
+							<td><%=article.title%></td>
+							<td><%=article.age%></td>
+							<td><%= article.season %></td>
+							<td><%= article.country %></td>
+							<td><%=article.place%></td>
+							<td><%=article.price%></td>
+							<td>
+							<div id="favorites">
+								<%= render "articles/favorites" , article: article %>
+							</div>
+							</td>
+							<td><%= article.favorites.count%></td>
+		 		
+						 <% end %>
+					      
+							</tr>									
+				</tbody>
+			</table>
+								
+	</div>
+
+		<div class="container3">
+			<h3>Informationen</h3>
+				<ul class="clearfix" style="list-style: none;">
+
+					<li class="clearfix">
+						<div class="info_icon_media">a</div>
+						<div class="info_time">2017/1/22</div>
+						<div class="info_icon"></div>
+						<div class="info_container_right">
+							<div class="info_title">title</div>
+							<div class="info_contents">contents</div>
+						</div>
+					</li>
+
+					<li class="clearfix">
+						<div class="info_icon_media">b</div>
+						<div class="info_time">2017/1/22</div>
+						<div class="info_icon"></div>
+						<div class="info_container_right">
+							<div class="info_title">title</div>
+							<div class="info_contents">contents</div>
+						</div>
+					</li>
+
+					<li class="clearfix">
+						<div class="info_icon_media">c</div>
+						<div class="info_time">2017/1/22</div>
+						<div class="info_icon"></div>
+						<div class="info_container_right">
+							<div class="info_title">title</div>
+							<div class="info_contents">contents</div>
+						</div>
+					</li>
+
+
+				</ul>	
+		</div>
+
+		<div class="container3_media">
+			<h3>Media</h3>
+			<div class="container_media">
+				
+				<ul style="list-style: none">
+					<li>
+						<img src="assets/p1.jpg" >
+						<div class="figurecaption">
+							<p>title</p>
+							<p>comming soon</p>
+						</div>
+					</li>
+
+					<li>
+						<img src="assets/p2.jpg" >
+						<div class="figurecaption">
+							<p>Media name</p>
+							<p>day</p>
+							<p>comming soon</p>
+						</div>
+					</li>
+						
+					<li>
+						<img src="assets/p3.jpg">
+						<div class="figurecaption">
+							<p>title</p>
+							<p>comming soon</p>
+						</div>
+					</li>
+
+					<li>
+						<img src="assets/p2.jpg" >
+						<div class="figurecaption">
+							<p>title</p>
+							<p>comming soon</p>
+						</div>
+					</li>
+
+
+					
+				</ul>
+				<div class="viewall" >View ALL      &gt;</div>
+
+			</div>
+		</div>
+
+		<div class="container3">
+			<h3>Instagram</h3>
+				<h4>Comming Soon...</h4>
+			<div class="viewall" >View ALL      &gt;</div>
+		</div>
+
+		<div class="container3">
+			<h3>アニメーション置くとこ</h3>
+				<div class="animation_container">
+					<div class="animation_background"></div>
+					<div class="animation_main"><img src="assets/profimayu.png"></div>
+				</div>
+		</div>
+
+		<script type="text/javascript">
+		// swiper
+		    var appendNumber = 4;
+		    var prependNumber = 1;
+		    var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        grabCursor: true,
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        slidesPerView: 3,
+		        centeredSlides: false,
+		        paginationClickable: true,
+		        spaceBetween: 0,
+		    });
+		    document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+		    });
+		</script>
+
+	</body>
+</html>

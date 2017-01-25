@@ -1,0 +1,13 @@
+<h1>留学体験談</h1>
+
+<ul>
+	<div class="box">
+	<%@homes.each do|home|%>
+	<%= home.name %>
+	<%= home.price %>
+	<%= home.agent %>
+	<%= home.goodpoint %>
+	<%= home.badpoint%>
+	</div>
+	<% end %>
+</ul>

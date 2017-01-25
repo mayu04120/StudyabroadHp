@@ -1,0 +1,51 @@
+<ul>
+    <li>
+        <div class="text" style="margin-top: 100px;">いいね一覧</div>
+        <div class="num"><%= @user.favorites.count %></div>
+    
+    </li>
+</ul>
+
+<% if @user.favorites.empty? %>
+    <div class="list-group-item">
+      まだお気に入りされた投稿はありません。
+    </div>
+       
+        <table>
+          <thead>
+              <tr>
+                <th>Bilder</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th >Age</th>
+                <th >Jahres Zeit</th>
+                <th>Region</th>
+                <th>Ort</th>
+                <th>Price</th>
+                <th>Favoriten</th>
+              </tr>
+          </thead>
+
+          <tbody>
+           <% @user.favorites.map { |f| f.home }.each do |home| %>
+            <tr>
+                <% if home.image? %>
+                  　 <td><%=  image_tag home.image.url%></td>
+                  　<% else %>
+                      <td>Kein Bild</td>
+                  　<% end %>
+                <td style="background-color: grey;">
+                    <%=  link_to home.name, article_path(home.id) %>
+                  </td>
+                  <td><%=home.title%></td>
+                  <td><%=home.age%></td>
+                  <td><%= home.season %></td>
+                  <td><%= home.country %></td>
+                  <td><%=home.place%></td>
+                  <td><%=home.price%></td>
+                  <td><%= link_to "いいね解除", article_favorites_path(home), method: :delete %></td>
+             <% end %>
+            </tr>
+         </tbody>
+</table>
+<% end %>

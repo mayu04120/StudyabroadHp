@@ -1,0 +1,185 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 游ゴシック;
+}
+
+
+ /*header*/
+ header{
+ 	background-color: rgba(0,0,225,0.8);	
+ 	position: fixed;
+ 	height: 100px;
+ 	top: 0;
+ 	width: 100%;
+ 	z-index: 3;
+
+ }
+ .container{
+ 	margin-left: 10px;
+ 	padding-bottom: 10px;
+ 	width: 200px;
+ 	display: inline-block;
+ }
+ .explanation{
+ 	font-family: るりいろフォント;
+ 	font-size:12px;
+	display: inline-block;
+	color: white;
+ }
+ /*footer*/
+footer{
+	background-color: #000080;
+	line-height: 30px;
+	font-size: 13px;
+	color: white;
+	text-align: center;
+}
+
+
+ /*ハンバーガーアイコン*/
+ .i{
+ 	margin-top: 10px;
+ 	display: inline-block;
+ 	height: 80px;
+ 	width: 80px;
+ 	float: right;
+ }
+.icon{
+	cursor: pointer;
+	padding: 5px 5px 1px 5px;
+	float: right;
+	margin-right: 30px;
+	border: 2px solid white;
+	border-radius: 5px;
+}
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+}
+.menu-trigger {
+	position: relative;
+	width: 50px;
+	height: 44px;
+
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 5px;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 20px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 5px;
+}
+.hamnav{
+	display: none;
+	border:solid;
+	border-color: rgba(225,225,225,0.8);
+	background-color: rgba(225,225,225,0.8);
+	border-radius: 5px;
+	float: right;
+	margin-top: 10px;
+	margin-right: -50px;
+	width: 20%;
+	text-align: center;
+	color: blue;
+	line-height: 40px;
+	font-size: 20px;
+
+}
+.hamnav_font{
+	font-family: るりいろフォント;
+	font-size: 16px;
+	text-decoration: none;
+	color: black;
+}
+
+/*ハンバーガーアイコンここまで*/
+/*site内検索*/
+
+ .sitekensaku{
+ 	background-color: transparent;
+ 	/*text-align: center;*/
+ 	width: 80%;
+ 	margin:auto;
+ }
+ .sitekensaku:action{
+ 	background-color: white;
+ }
+
+/*個々のページabout contact event*/
+.page_background{
+	background-color:#EEFFFF;
+	margin: auto;
+	width: 80%;
+	text-align: center;
+}
+.about{
+	margin:auto;
+	width: 500px;
+	height: 300px;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+
+/* フォント */
+h1{
+	font-size: 40px;
+	color: #000033;
+	text-align: center;
+	z-index: 3;
+}
+
+h2{
+	font-size: 25px;
+	background-color: rgba(255,255,255,0.4);
+	height: 50px;
+	line-height: 50px;
+}
+h3{
+	border-radius: 5px;
+	box-shadow: 2px 0px 5px;
+	background-color:#99CCFF;
+	font-size: 300%;
+	color: grey;
+	margin-bottom: 20px;
+	font-family: るりいろフォント;
+}
+
+
+.devise_container{
+	margin-top: 100px;
+	height: 600px;
+}
+
+a {
+	text-decoration: none;
+	font-family: 游ゴシック;
+}

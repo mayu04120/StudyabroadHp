@@ -1,0 +1,40 @@
+/*// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+/*ranking*/
+.ranking_container{
+	text-align: center;
+	width: 80%;
+	margin:auto;
+	padding-top: 80px;
+}
+.ranking{
+	background-color: skyblue;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+a[title="ranking"]{
+	font-size: 25px;
+}
+a:hover[title="ranking"]{
+	color: black
+}
+
+.ranking_top1{
+  	background-color: grey;
+  	background-size: cover;
+  	height: 120px;
+  	margin-bottom: 10px;
+  	  }
+
+.ranking_top2{
+  	background-color: grey;
+  	background-size: cover;
+  	height: 80px;
+  	margin-bottom: 10px;
+  	  }
+
