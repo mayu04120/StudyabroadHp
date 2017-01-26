@@ -293,8 +293,7 @@ $(function(){
 
 
 function reset1(){
-	var map ="assets/images/map.png"
-	document.imgLink.src=map;
+	document.imgLink.src=image_path('map.png');
 	document.getElementById('message').innerHTML="select the area";
 }
 
