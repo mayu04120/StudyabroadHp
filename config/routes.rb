@@ -12,7 +12,8 @@ Rails.application.routes.draw do
  get'/pamphlet'=>'home#pamphlet'
   get'/media'=>'home#media'
 
-
+  get'/inquiry' => 'inquiries#index'
+  post'inquiry/gratitude' =>'inquiries#gratitude'
 
   post '/home' => 'home#create'
   # get'article/show/:id'=>'article#show', as:'pageshow'

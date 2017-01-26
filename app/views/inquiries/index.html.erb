@@ -1,0 +1,11 @@
+ <%= form_for(@inquiry, url: inquiry_gratitude_path) do |f| %>
+
+<p style="margin-top: 100px;">名前<span class="text-danger">（必須）</span>:<%= f.text_field :name %></p>
+<p>TItle</p>
+<p><%= f.text_field :title %></p>
+<p>メールアドレス<span class="text-danger">（必須）</span></p>
+<p><%= f.text_field :mail %></p>
+<p>お問い合わせ内容<span class="text-danger">（必須）</span></p>
+<p><%= f.text_area :contents %></p>
+<p> <%= f.submit '送信'%></p>
+    <% end %>
