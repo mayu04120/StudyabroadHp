@@ -289,12 +289,13 @@ $(function(){
 });
 
 
-// 多言語化
+// Change Map
 
 
 function reset1(){
-	document.imgLink.src="assets/map.png";
-	document.getElementById('message').innerHTML="select the area"
+	var map ="assets/map.png"
+	document.imgLink.src=map;
+	document.getElementById('message').innerHTML="select the area";
 }
 
 function hokkaido1(){
