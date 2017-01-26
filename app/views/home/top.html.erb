@@ -425,42 +425,41 @@
 				
 				<ul style="list-style: none">
 					<li>
-						<img src="assets/p1.jpg" >
+						<%= image_tag("p1.jpg") %>
 						<div class="figurecaption">
-							<p>title</p>
-							<p>comming soon</p>
+							<p><%= link_to "title", media_path%></p>
+							<p><%= link_to "contents", media_path%></p>
 						</div>
 					</li>
 
 					<li>
-						<img src="assets/p2.jpg" >
+						<%= image_tag("p2.jpg") %>
 						<div class="figurecaption">
-							<p>Media name</p>
-							<p>day</p>
-							<p>comming soon</p>
+							<p><%= link_to "title", media_path%></p>
+							<p><%= link_to "contents", media_path%></p>
 						</div>
 					</li>
 						
 					<li>
-						<img src="assets/p3.jpg">
+						<%= image_tag("p3.jpg") %>
 						<div class="figurecaption">
-							<p>title</p>
-							<p>comming soon</p>
+							<p><%= link_to "title", media_path%></p>
+							<p><%= link_to "contents", media_path%></p>
 						</div>
 					</li>
 
 					<li>
-						<img src="assets/p2.jpg" >
+						<%= image_tag("p2.jpg") %>
 						<div class="figurecaption">
-							<p>title</p>
-							<p>comming soon</p>
+							<p><%= link_to "title", media_path%></p>
+							<p><%= link_to "contents", media_path%></p>
 						</div>
 					</li>
 
 
 					
 				</ul>
-				<div class="viewall" >View ALL      &gt;</div>
+				<div class="viewall" ><%= link_to "View ALL   >", media_path, :style=>"color:white;"%></div>
 
 			</div>
 		</div>
@@ -468,14 +467,14 @@
 		<div class="container3">
 			<h3>Instagram</h3>
 				<h4>Comming Soon...</h4>
-			<div class="viewall" >View ALL      &gt;</div>
+			<div class="viewall" ><%= link_to "View ALL   >", top_path,:style=>"color:white;"%></div>
 		</div>
 
 		<div class="container3">
-			<h3>アニメーション置くとこ</h3>
+			<h3>Noch nicht</h3>
 				<div class="animation_container">
 					<div class="animation_background"></div>
-					<div class="animation_main"><img src="assets/profimayu.png"></div>
+					<div class="animation_main"><%= image_tag("profimayu.png") %></div>
 				</div>
 		</div>
 
