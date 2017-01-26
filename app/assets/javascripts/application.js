@@ -338,7 +338,7 @@ function kyusyu1(){
 
 // 左のmodal-window内の画像の切り替え
 function reset2(){
-	document.imgLink2.src="assets/map.png";
+	document.imgLink2.src=image_path('map.png');
 	document.getElementById('message2').innerHTML="select the area"
 }
 
