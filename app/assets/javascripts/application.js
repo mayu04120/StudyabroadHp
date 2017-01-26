@@ -293,12 +293,13 @@ $(function(){
 
 
 function reset1(){
-	var map ="assets/map.png"
+	var map ="assets/images/map.png"
 	document.imgLink.src=map;
 	document.getElementById('message').innerHTML="select the area";
 }
 
 function hokkaido1(){
+
   document.imgLink.src = "assets/hokkaido.png";
   document.getElementById("message").innerHTML = "select Hokkaido buttun right";
 }
