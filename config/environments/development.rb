@@ -35,7 +35,7 @@ Rails.application.configure do
     #:enable_starttls_auto => false,
     :address => 'smtp.gmail.com',
     :port => 587,
-    :domain => 'dmpp1204.com',
+    :domain => 'localhost:3000',
     :authentication => :plain,
     :user_name => 'dmpp1204@gmail.com',
     :password => 'myjineru420',
