@@ -12,6 +12,12 @@ def show
 	@article = Article.find(params[:id])	
 end
 
+   def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to article_path
+   end
+   
 def create
   	@article=Article.new(article_params)
   	if @article.save
@@ -30,9 +36,6 @@ end
    	params.require(:article).permit(:name, :title, :age, :contents, :place, :price, :country, :season, :image)
    end
 
-   def destroy
-    @article.destroy     
-   end
-   
+
 
 end

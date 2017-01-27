@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 # get"users/show/:id"=>"users#show", as:"usersshow"
   # root 'article#index'
 
-delete'/articles/:id' =>'articles#destroy', as: 'articles_destroy'
+
 resources :articles do
   # resources :aricles, except:[:show] do
     resources :favorites, only: [:create, :destroy]
