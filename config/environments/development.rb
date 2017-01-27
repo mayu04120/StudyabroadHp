@@ -36,7 +36,7 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     :port => 587,
     :domain => 'dmpp1204.com',
-    :authentication => :login,
+    :authentication => :plain,
     :user_name => 'dmpp1204@gmail.com',
     :password => 'myjineru420'
   }
