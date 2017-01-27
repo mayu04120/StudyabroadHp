@@ -30,6 +30,9 @@ end
    	params.require(:article).permit(:name, :title, :age, :contents, :place, :price, :country, :season, :image)
    end
 
+   def destroy
+    @article.destroy     
+   end
    
 
 end
