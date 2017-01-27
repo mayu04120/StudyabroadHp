@@ -4,7 +4,7 @@ class InquiryMailer < ApplicationMailer
 
 	def received_email(inquiry)
 	  @inquiry = inquiry
-	  mail(:subject => 'ユーザーに配信されるメールのタイトル')
+	  mail(:subject => 'Websiteからのメッセージ')
 	end
 
 	 def index

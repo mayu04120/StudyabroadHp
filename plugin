@@ -753,4 +753,336 @@ remote:        No Procfile detected, using the default web server.[K
 remote:        We recommend explicitly declaring how to boot your server process via a Procfile.[K
 remote:        https://devcenter.heroku.com/articles/ruby-default-web-server[K
 remote: 
-remote: -----> Discovering
+remote: -----> Discovering process types[K
+remote:        Procfile declares types     -> (none)[K
+remote:        Default types for buildpack -> console, rake, web, worker[K
+remote: 
+remote: -----> Compressing...[K
+remote:        Done: 178.1M[K
+remote: -----> Launching...[K
+remote:        Released v22[K
+remote:        https://mighty-ridge-78719.herokuapp.com/ deployed to Heroku[K
+remote: 
+remote: Verifying deploy... done.[K
+To https://git.heroku.com/mighty-ridge-78719.git
+   8f58337..94fe07e  master -> master
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ gti[K[Kit add .
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git commit -m ""m"a"i"l"f"o"r"m"
+[master b306a3d] mailform
+ 3 files changed, 148 insertions(+), 4 deletions(-)
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git push origin master
+Username for 'https://github.com': mayu04120
+Password for 'https://mayu04120@github.com': 
+Counting objects: 13, done.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1014 bytes | 0 bytes/s, done.
+Total 7 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/5)   [Kremote: Resolving deltas:  20% (1/5)   [Kremote: Resolving deltas:  40% (2/5)   [Kremote: Resolving deltas:  60% (3/5)   [Kremote: Resolving deltas:  80% (4/5)   [Kremote: Resolving deltas: 100% (5/5)   [Kremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
+To https://github.com/mayu04120/mayu.git
+   94fe07e..b306a3d  master -> master
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git push heroku master
+Counting objects: 13, done.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1014 bytes | 0 bytes/s, done.
+Total 7 (delta 5), reused 0 (delta 0)
+remote: Compressing source files... done.[K
+remote: Building source:[K
+remote: [K
+remote: -----> Ruby app detected[K
+remote: -----> Compiling Ruby/Rails[K
+remote: -----> Using Ruby version: ruby-2.2.6[K
+remote: -----> Installing dependencies using bundler 1.13.7[K
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment[K
+remote:        Fetching gem metadata from https://rubygems.org/.........[K
+remote:        Fetching version metadata from https://rubygems.org/..[K
+remote:        Fetching dependency metadata from https://rubygems.org/.[K
+remote:        Using rake 12.0.0[K
+remote:        Using i18n 0.7.0[K
+remote:        Using minitest 5.10.1[K
+remote:        Using thread_safe 0.3.5[K
+remote:        Using concurrent-ruby 1.0.4[K
+remote:        Using builder 3.2.3[K
+remote:        Using erubis 2.7.0[K
+remote:        Using mini_portile2 2.1.0[K
+remote:        Using rack 2.0.1[K
+remote:        Using nio4r 1.2.1[K
+remote:        Using websocket-extensions 0.1.2[K
+remote:        Using mime-types-data 3.2016.0521[K
+remote:        Using arel 7.1.4[K
+remote:        Using bcrypt 3.1.11[K
+remote:        Using coffee-script-source 1.12.2[K
+remote:        Using execjs 2.7.0[K
+remote:        Using method_source 0.8.2[K
+remote:        Using thor 0.19.4[K
+remote:        Using orm_adapter 0.5.0[K
+remote:        Using multi_json 1.12.1[K
+remote:        Using turbolinks-source 5.0.0[K
+remote:        Using kaminari-core 1.0.1[K
+remote:        Using libv8 3.16.14.17[K
+remote:        Using pg 0.19.0[K
+remote:        Using puma 3.6.2[K
+remote:        Using bundler 1.13.7[K
+remote:        Using ref 2.0.0[K
+remote:        Using rmagick 2.16.0[K
+remote:        Using sass 3.4.23[K
+remote:        Using tilt 2.0.5[K
+remote:        Using tzinfo 1.2.2[K
+remote:        Using rack-test 0.6.3[K
+remote:        Using warden 1.2.6[K
+remote:        Using sprockets 3.7.1[K
+remote:        Using websocket-driver 0.6.4[K
+remote:        Using mime-types 3.1[K
+remote:        Using coffee-script 2.4.1[K
+remote:        Using uglifier 3.0.4[K
+remote:        Using turbolinks 5.0.1[K
+remote:        Using nokogiri 1.7.0.1[K
+remote:        Using therubyracer 0.12.3[K
+remote:        Using activesupport 5.0.1[K
+remote:        Using mail 2.6.4[K
+remote:        Using loofah 2.0.3[K
+remote:        Using rails-dom-testing 2.0.2[K
+remote:        Using globalid 0.3.7[K
+remote:        Using activemodel 5.0.1[K
+remote:        Using jbuilder 2.6.1[K
+remote:        Using rails-html-sanitizer 1.0.3[K
+remote:        Using activejob 5.0.1[K
+remote:        Using activerecord 5.0.1[K
+remote:        Using carrierwave 1.0.0[K
+remote:        Using actionview 5.0.1[K
+remote:        Using kaminari-activerecord 1.0.1[K
+remote:        Using polyamorous 1.3.1[K
+remote:        Using actionpack 5.0.1[K
+remote:        Using kaminari-actionview 1.0.1[K
+remote:        Using actioncable 5.0.1[K
+remote:        Using actionmailer 5.0.1[K
+remote:        Using railties 5.0.1[K
+remote:        Using sprockets-rails 3.2.0[K
+remote:        Using ransack 1.8.2[K
+remote:        Using kaminari 1.0.1[K
+remote:        Using coffee-rails 4.2.1[K
+remote:        Using responders 2.3.0[K
+remote:        Using jquery-rails 4.2.2[K
+remote:        Using jquery-turbolinks 2.1.0[K
+remote:        Using rails 5.0.1[K
+remote:        Using sass-rails 5.0.6[K
+remote:        Using devise 4.2.0[K
+remote:        Bundle complete! 22 Gemfile dependencies, 70 gems now installed.[K
+remote:        Gems in the groups development and test were not installed.[K
+remote:        Bundled gems are installed into ./vendor/bundle.[K
+remote:        Bundle completed (4.43s)[K
+remote:        Cleaning up the bundler cache.[K
+remote: -----> Detecting rake tasks[K
+remote: -----> Preparing app for Rails asset pipeline[K
+remote:        Running: rake assets:precompile[K
+remote:        Asset precompilation completed (4.63s)[K
+remote:        Cleaning assets[K
+remote:        Running: rake assets:clean[K
+remote: 
+remote: ###### WARNING:[K
+remote:        You have not declared a Ruby version in your Gemfile.[K
+remote:        To set your Ruby version add this line to your Gemfile:[K
+remote:        ruby '2.2.6'[K
+remote:        # See https://devcenter.heroku.com/articles/ruby-versions for more information.[K
+remote: 
+remote: ###### WARNING:[K
+remote:        No Procfile detected, using the default web server.[K
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.[K
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server[K
+remote: 
+remote: -----> Discovering process types[K
+remote:        Procfile declares types     -> (none)[K
+remote:        Default types for buildpack -> console, rake, web, worker[K
+remote: 
+remote: -----> Compressing...[K
+remote:        Done: 178.1M[K
+remote: -----> Launching...[K
+remote:        Released v23[K
+remote:        https://mighty-ridge-78719.herokuapp.com/ deployed to Heroku[K
+remote: 
+remote: Verifying deploy... done.[K
+To https://git.heroku.com/mighty-ridge-78719.git
+   94fe07e..b306a3d  master -> master
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ /plugin install git://github.c om/adamwiggins/gmail_smtp.git
+bash: /plugin: No such file or directory
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ /plugin install git://github.c om/adamwiggins/gmail_smtp.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cplugin install git://github.com[1P/adamwiggins/gmail_smtp.git[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ 
+
+plugin: command not found
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ script/plugin install git://gi thub.com/adamwiggins/gmail_smtp.git
+bash: script/plugin: No such file or directory
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$  heroku config:get SENDGRID_US ERNAME[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USER[1PNAME[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USERN[1PAME[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USERNA[1PME[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USERNAM[1PE[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USERNAME[K[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_USERNAME [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P_USERNAME
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P_USERNAMEG_USERNAMEm_USERNAME [A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P_USERNAME
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CM_USERNAME [A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CA_USERNAMEE[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CI_USERNAME[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CL_USERNAME[A]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+[?25h]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ heroku run rails console
+[1000D[2K[?25lRunning [36m[1mrails console[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⣾[39m 
+[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⢿[39m starting, run.3976 (Free)
+[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⢿[39m connecting, run.3976 (Free)
+[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[49C[35m⣻[39m[1B[1000D[2K[1A[49C[35m⢿[39m[1B[1000D[2K[1A[49C[35m⡿[39m[1B[1000D[2K[1A[49C[35m⣟[39m[1B[1000D[2K[1A[49C[35m⣯[39m[1B[1000D[2K[1A[49C[35m⣷[39m[1B[1000D[2K[1A[49C[35m⣾[39m[1B[1000D[2K[1A[49C[35m⣽[39m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [35m⬢ mighty-ridge-78719[39m... up, run.3976 (Free)
+[?25hLoading production environment (Rails 5.0.1)
+irb(main):001:0>  ActionMailer::Base.mail(from: “sample@sample.com”, to: “sample to@sample.com”, subject: “題名”, body: “本文”).deliver
+SyntaxError: (irb):1: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...ase.mail(from: “sample@sample.com”, to: “sampleto@samp...
+...                               ^
+(irb):1: syntax error, unexpected tLABEL, expecting '='
+...m: “sample@sample.com”, to: “sampleto@sample.com”, s...
+...                               ^
+(irb):1: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):002:0>  ActionMailer::Base.mail(from: “sample@sample.com”, to: “sample to@sample.com”, subject: “題名”, body: “本文”).deliver[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”,[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”, [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”, s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”, su[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”, sub[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C”, subj[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cf”, sub[1@j[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm”, su[1@b[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp”, s[1@u[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp”, [1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1”,[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2”[1@,[1@0[1@4[1@@[1@g[1@m[1@a[1@i[1@l[1@.[1@c[1@o[1@,[1P[1@m
+SyntaxError: (irb):2: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...ase.mail(from: “sample@sample.com”, to: “fmpp1204@gmai...
+...                               ^
+(irb):2: syntax error, unexpected tLABEL, expecting '='
+...m: “sample@sample.com”, to: “fmpp1204@gmail.com”, su...
+...                               ^
+(irb):2: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):003:0>  ActionMailer::Base.mail(from: “sample@sample.com”, to: “fmpp12004@gmail.com”, subject: “題名”, body: “本文”).deliver[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmpp1204[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdmpp120[1@4[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ActionMailer::Base.mail(from: “sample@sample.com”, to: “dmpp12004@gmail.com”, subject: “題名”, body: “本文”).deliver
+SyntaxError: (irb):3: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...ase.mail(from: “sample@sample.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):3: syntax error, unexpected tLABEL, expecting '='
+...m: “sample@sample.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):3: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):004:0>  ActionMailer::Base.mail(from: “sample@sample.com”, to: “dmpp12004@gmail.com”, subject: “題名”, body: “本文”).deliver[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@g[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gm[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gma[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmai[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.c[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.co[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.com[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.com”[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.com”,[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccom”, to: “dmpp1204@gmail.com”, [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfcom”, to: “dmpp1204@gmail.com”,[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmcom”, to: “dmpp1204@gmail.com”[1@,[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpcom”, to: “dmpp1204@gmail.com[1@”[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpcom”, to: “dmpp1204@gmail.co[1@m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1com”, to: “dmpp1204@gmail.c[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2com”, to: “dmpp1204@gmail.[1@c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0com”, to: “dmpp1204@gmail[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4com”, to: “dmpp1204@gmai[1@l[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C@com”, to: “dmpp1204@gma[1@i[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcom”, to: “dmpp1204@gm[1@a[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmcom”, to: “dmpp1204@g[1@m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cacom”, to: “dmpp1204@[1@g[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cicom”, to: “dmpp1204[1@@[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clcom”, to: “dmpp120[1@4[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.com”, to: “dmpp12[1@0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+SyntaxError: (irb):4: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “fmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):4: syntax error, unexpected tLABEL, expecting '='
+...: “fmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):4: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):005:0>  ActionMailer::Base.mail(from: “fmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, subject: “題名”, body: “本文”).deliver
+SyntaxError: (irb):5: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “fmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):5: syntax error, unexpected tLABEL, expecting '='
+...: “fmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):5: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):006:0>  ActionMailer::Base.mail(from: “fmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, subject: “題名”, body: “本文”).deliver_now
+SyntaxError: (irb):6: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “fmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):6: syntax error, unexpected tLABEL, expecting '='
+...: “fmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):6: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver_now
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):007:0>  ActionMailer::Base.mail(from: “fmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, subject: “題名”, body: “本文”).deliver_now[K[C[Asample@sample.com”, to: “dmpp120[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Afmpp1204@gmail.com”, to: “dmpp12[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmpp1204@gmail.com”, to: “dmpp120[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdmpp1204@gmail.com”, to: “dmpp12[1@0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+SyntaxError: (irb):7: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “dmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):7: syntax error, unexpected tLABEL, expecting '='
+...: “dmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):7: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):008:0>  ActionMailer::Base.mail(from: “dmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, subject: “題名”, body: “本文”).deliver_now
+SyntaxError: (irb):8: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “dmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):8: syntax error, unexpected tLABEL, expecting '='
+...: “dmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, su...
+...                               ^
+(irb):8: syntax error, unexpected ')', expecting end-of-input
+...“題名”, body: “本文”).deliver_now
+...                                 ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):009:0>  ActionMailer::Base.mail(from: “dmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, subject: “題名”, body: “本文”).deliver_now[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@c[1@o[1@n[1@t[1@e[1@n[1@t[1@s[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1@t[1@i[1@t[1@l[1@e
+SyntaxError: (irb):9: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “dmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):9: syntax error, unexpected tLABEL, expecting '='
+...: “dmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, ti...
+...                               ^
+(irb):9: syntax error, unexpected ')', expecting end-of-input
+...名”, contents: “本文”).deliver_now
+...                               ^
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console.rb:65:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/console_helper.rb:9:in `start'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:78:in `console'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /app/vendor/bundle/ruby/2.2.0/gems/railties-5.0.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from /app/bin/rails:9:in `require'
+	from /app/bin/rails:9:in `<main>'
+irb(main):010:0>  ActionMailer::Base.mail(from: “dmpp1204@gmail.com”, to: “dmpp12204@gmail.com”, title: “題名”, contents: “本文”).deliver_now[K[K[K[K
+SyntaxError: (irb):10: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+...se.mail(from: “dmpp1204@gmail.com”, to: “dmpp1204@gmai...
+...                               ^
+(irb):10: syntax error, unexpected tLABEL, expecting '='
+...: “dmpp1204@gmail.com”, to: “dmpp1204@gmail.com”, ti...
+...                               ^
+(irb):10: syntax error, unexpected ')', expecting end-of-input
+...名�
