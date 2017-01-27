@@ -38,7 +38,8 @@ Rails.application.configure do
     :domain => 'dmpp1204.com',
     :authentication => :plain,
     :user_name => 'dmpp1204@gmail.com',
-    :password => 'myjineru420'
+    :password => 'myjineru420',
+    :enable_starttls_auto=> true
   }
 
 
