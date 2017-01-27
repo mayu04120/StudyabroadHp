@@ -1,4 +1,6 @@
 class InquiryMailer < ApplicationMailer
+	default to: "dmpp1204@gmail.com"
+	default from: "dmpp1204@gmail.com"
 
 	def received_email(inquiry)
 	  @inquiry = inquiry
