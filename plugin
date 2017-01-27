@@ -165,4 +165,301 @@ Usage: rails generate GENERATOR [args] [options]
 
 General options:
   -h, [--help]     # Print generator's options and usage
-  -p, [--pretend]  # Run but do not 
+  -p, [--pretend]  # Run but do not make any changes
+  -f, [--force]    # Overwrite files that already exist
+  -s, [--skip]     # Skip files that already exist
+  -q, [--quiet]    # Suppress status output
+
+Please choose a generator below.
+
+Expected boolean default value for '--markerb'; got :erb (string)
+Expected string default value for '--helper'; got true (boolean)
+Expected string default value for '--assets'; got true (boolean)
+Rails:
+  assets
+  channel
+  controller
+  generator
+  helper
+  integration_test
+  jbuilder
+  job
+  mailer
+  migration
+  model
+  resource
+  responders_controller
+  scaffold
+  scaffold_controller
+  task
+
+ActiveRecord:
+  active_record:devise
+
+Coffee:
+  coffee:assets
+
+Devise:
+  devise
+  devise:controllers
+  devise:install
+  devise:views
+
+Js:
+  js:assets
+
+Kaminari:
+  kaminari:config
+  kaminari:views
+
+Mongoid:
+  mongoid:devise
+
+Responders:
+  responders:install
+
+TestUnit:
+  test_unit:generator
+  test_unit:plugin
+
+Uploader:
+  uploader
+
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git add .
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git commit -m ""m"a"i"o"[1P"l"f"o"r"m"
+[master f64c6ec] mailform
+ 2 files changed, 159 insertions(+), 5 deletions(-)
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ git push origin master
+Username for 'https://github.com': mayu04120
+Password for 'https://mayu04120@github.com': 
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 3.06 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/mayu04120/mayu.git
+   c0b9ea9..f64c6ec  master -> master
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ rake db:schema:load RAILS_ENV= production
+
+rake aborted!
+Gem::LoadError: Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:176:in `rescue in spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:173:in `spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `instance_eval'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `execute_hook'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:33:in `block in on_load'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `each'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `on_load'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:121:in `block in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `run'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:352:in `initialize!'
+/vagrant/lesson/config/environment.rb:5:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:328:in `require_environment!'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/var/lib/gems/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+Gem::LoadError: pg is not part of the bundle. Add it to Gemfile.
+/var/lib/gems/2.3.0/gems/bundler-1.13.7/lib/bundler/rubygems_integration.rb:336:in `block (2 levels) in replace_gem'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:2:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `instance_eval'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `execute_hook'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:33:in `block in on_load'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `each'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `on_load'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:121:in `block in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `run'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:352:in `initialize!'
+/vagrant/lesson/config/environment.rb:5:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:328:in `require_environment!'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/var/lib/gems/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+Tasks: TOP => db:schema:load => environment
+(See full trace by running task with --trace)
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ 
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ 
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ rake db:migrate RAILS_ENV=prod uction
+rake aborted!
+Gem::LoadError: Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:176:in `rescue in spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:173:in `spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `instance_eval'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `execute_hook'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:33:in `block in on_load'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `each'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `on_load'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:121:in `block in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `run'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:352:in `initialize!'
+/vagrant/lesson/config/environment.rb:5:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:328:in `require_environment!'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/var/lib/gems/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+Gem::LoadError: pg is not part of the bundle. Add it to Gemfile.
+/var/lib/gems/2.3.0/gems/bundler-1.13.7/lib/bundler/rubygems_integration.rb:336:in `block (2 levels) in replace_gem'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:2:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `instance_eval'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:43:in `execute_hook'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:33:in `block in on_load'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `each'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/lazy_load_hooks.rb:32:in `on_load'
+/var/lib/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/railtie.rb:121:in `block in <class:Railtie>'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `run'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:352:in `initialize!'
+/vagrant/lesson/config/environment.rb:5:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/lib/gems/2.3.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:328:in `require_environment!'
+/var/lib/gems/2.3.0/gems/railties-5.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/var/lib/gems/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+Tasks: TOP => db:migrate => environment
+(See full trace by running task with --trace)
+]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ heroku rake db:migrate
+[1000D[2K[?25lRunning [36m[1mrake db:migrate[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⣾[39m 
+[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[JRunning [36m[1mrake db:migrate[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⣻[39m starting, run.3393 (Free)
+[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[JRunning [36m[1mrake db:migrate[22m[39m on [35m⬢ mighty-ridge-78719[39m... [35m⣻[39m connecting, run.3393 (Free)
+[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[51C[35m⡿[39m[1B[1000D[2K[1A[51C[35m⣟[39m[1B[1000D[2K[1A[51C[35m⣯[39m[1B[1000D[2K[1A[51C[35m⣷[39m[1B[1000D[2K[1A[51C[35m⣾[39m[1B[1000D[2K[1A[51C[35m⣽[39m[1B[1000D[2K[1A[51C[35m⣻[39m[1B[1000D[2K[1A[51C[35m⢿[39m[1B[1000D[2K[1A[JRunning [36m[1mrake db:migrate[22m[39m on [35m⬢ mighty-ridge-78719[39m... up, run.3393 (Free)
+[?25hD, [2017-01-27T02:42:39.361686 #4] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5733913073161421295);[0m
+D, [2017-01-27T02:42:39.386390 #4] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-01-27T02:42:39.414963 #4] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-01-27T02:42:39.428176 #4] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+D, [2017-01-27T02:42:39.430982 #4] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-01-27T02:42:39.431913 #4] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5733913073161421295)[0m
+[?25h]0;vagrant@vagrant-ubuntu-trusty-32: /vagrant/lessonvagrant@vagrant-ubuntu-trusty-32:/vagrant/lesson$ heroku[K[K[K[K[K[Ki[Kgit push heroku master
+Counting objects: 11, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 3.06 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Compressing source files... done.[K
+remote: Building source:[K
+remote: 
+remote: -----> Ruby app detected[K
+remote: -----> Compiling Ruby/Rails[K
+remote: -----> Using Ruby version: ruby-2.2.6[K
+remote: -----> Installing dependencies using bundler 1.13.7[K
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment[K
+remote:        Fetching gem metadata from https://rubygems.org/.........[K
+remote:        Fetching version metadata from https://rubygems.org/..[K
+remote:        Fetching dependency metadata from https://rubygems.org/.[K
+remote:        Using rake 12.0.0[K
+remote:        Using concurrent-ruby 1.0.4[K
+remote:        Using i18n 0.7.0[K
+remote:        Using minitest 5.10.1[K
+remote:        Using thread_safe 0.3.5[K
+remote:        Using builder 3.2.3[K
+remote:        Using erubis 2.7.0[K
+remote:        Using mini_portile2 2.1.0[K
+remote:        Using rack 2.0.1[K
+remote:        Using nio4r 1.2.1[K
+remote:        Using websocket-extensions 0.1.2[K
+remote:        Using mime-types-data 3.2016.0521[K
+remote:        Using arel 7.1.4[K
+remote:        Using bcrypt 3.1.11[K
+remote:        Using coffee-script-source 1.12.2[K
+remote:        Using execjs 2.7.0[K
+remote:        Using method_source 0.8.2[K
+remote:        Using thor 0.19.4[K
+remote:        Using orm_adapter 0.5.0[K
+remote:        Using multi_json 1.12.1[K
+remote:        Using turbolinks-source 5.0.0[K
+remote:        Using kaminari-core 1.0.1[K
+remote:        Using libv8 3.16.14.17[K
+remote:        Using pg 0.19.0[K
+remote:        Using puma 3.6.2[K
+remote:        Using bundler 1.13.7[K
+remote:        Using ref 2.0.0[K
+remote:        Using rmagick 2.16.0[K
+remote:        Using sass 3.4.23[K
+remote:        Using tilt 2.0.5[K
+remote:        Using tzinfo 1.2.2[K
+remote:        Using rack-test 0.6.3[K
+remote:        Using warden 1.2.6[K
+remote:        Using sprockets 3.7.1[K
+remote:        Using websocket-driver 0.6.4[K
+remote:        Using mime-types 3.1[K
+remote:        Using nokogiri 1.7.0.1[K
+remote:        Using coffee-script 2.4.1[K
+remote:        Using uglifier 3.0.4[K
+remote:        Using turbolinks 5.0.1[K
+remote:        Using activesupport 5.0.1[K
+remote:        Using therubyracer 0.12.3[K
+remote:        Using mail 2.6.4[K
+remote:        Using loofah 2.0.3[K
+remote:        Using rails-dom-testing 2.0.2[K
+remote:        Using globalid 0.3.7[K
+remote:        Using activemodel 5.0.1[K
+remote:        Using jbuilder 2.6.1[K
+remote:        Using rails-html-sanitizer 1.0.3[K
+remote:        Using activejob 5.0.1[K
+remote:        Using activerecord 5.0.1[K
+remote:        Using carrierwave 1.0.0[K
+remote:        Using actionview 5.0.1[K
+remote:        Using kaminari-activerecord 1.0.1[K
+remote:        Using polyamorous 1.3.1[K
+remote:        Using actionpack 5.0.1[K
+remote:        Using kaminari-actionview 1.0.1[K
+remote:        Using actioncable 5.0.1[K
+remote:        Using actionmailer 5.0.1[K
+remote:        Using railties 5.0.1[K
+remote:        Using sprockets-rails 3.2.0[K
+remote:        Using ransack 1.8.2[K
+remote:        Using kaminari 1.0.1[K
+remote:        Using coffee-rails 4.2.1[K
+remote:        Using responders 2.3.0[K
+remote:        Using jquery-rails 4.2.2[K
+remote:        Using jquery-turbolinks 2.1.0[K
+remote:        Using rails 5.0.1[K
+remote:        Using sass-rails 5.0.6[K
+remote:        Using devise 4.2.0[K
+remote:        Bundle complete! 22 Gemfile dependencies, 70 gems now installed.[K
+remote:        Gems in the groups development and test were not installed.[K
+remote:        Bundled gems are installed into ./vendor/bundle.[K
+remote:        Bundle completed (7.16s)[K
+remote:        Cleaning up the bundler cache.[K
+remote: -----> Detecting rake tasks[K
+remote: -----> Preparing app for Rails asset pipeline[K
+remote:        Running: rake assets:precompile[K
+remote:        Asset precompilation completed (4.67s)[K
+remote:        Cleanin
