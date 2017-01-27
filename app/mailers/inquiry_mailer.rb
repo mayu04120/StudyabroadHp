@@ -1,6 +1,4 @@
 class InquiryMailer < ApplicationMailer
-	default to: "dmpp1204@gmail.com"
-	default from: "dmpp1204@gmail.com"
 
 	def received_email(inquiry)
 	  @inquiry = inquiry
@@ -10,8 +8,6 @@ class InquiryMailer < ApplicationMailer
 	 def index
 	 	@inquiry = Inquiry.new
 	 	render :action =>'index'
-
-	 	mail to:"dmpp1204@gmail.com"
 	 end
 
 	 def gratitude
@@ -19,7 +15,6 @@ class InquiryMailer < ApplicationMailer
 	 	InquiryMailer.received_email(@inquiry).deliver_now
 
 	 	render :action =>'gratitude'
-	 	mail to:"dmpp1204@gmail.com"
 	 end
 
 	private
